@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-darkGreen: #14532d;
+  --color-natureGreen: #22c55e;
+  --color-softLeafGreen: #84cc16;
+  --color-lightEcoGreen: #d9f99d;
+  --color-white: #ffffff;
+  
+  /* Map existing color names to the new green theme for maximum compatibility */
+  --color-envGreen: #22c55e;
+  --color-darkBlue: #14532d;
+  --color-emeraldAccents: #84cc16;
+  --color-lightGray: #F8FAFC;
+  
+  --font-sans: 'Inter', 'Poppins', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-lightGray);
+    color: var(--color-darkBlue);
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-darkBlue);
+  }
+}
+
+@utility glassmorphism {
+  background-color: rgb(255 255 255 / 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.2);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+@utility glassmorphism-dark {
+  background-color: rgb(15 23 42 / 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
